@@ -128,11 +128,13 @@ flask run
 
 ### 🔎 Verifying AI-Generated Alt Text
 
-To verify the AI-generated alt text, follow these steps:
+To verify AI-generated alt text, follow these steps:
 
-•	Inspect the HTML source of an image:
+🔹 Inspect the HTML source of an image:
 
-Right-click → Inspect Element and check the <img> tag’s alt attribute.
+• Right-click an image → Click Inspect Element
+
+• Find the <img> tag and check the alt attribute
 
 ---
 ### 🎭 Demo Test Account
