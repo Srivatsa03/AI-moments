@@ -26,6 +26,18 @@ Moments is a Flask-based image-sharing platform that **leverages AI** to automat
 - Users can **search images** using **keywords that match tags**.
 - **Example:** Searching "cat" will retrieve all images that contain cats.
 
+## 🎨 User Interface Design Approach  
+
+### 📝 Alternative Text (Automated but Editable)  
+- **Default Behavior:** AI automatically generates alt text when an image is uploaded.
+- **User Override:** Users can edit the AI-generated alt text if needed.
+- **UI Interaction:** The alt-text field is pre-filled but **editable** before publishing.
+
+### 🔍 Image Search (Fully Automated)  
+- AI **automatically generates** tags for each image.
+- Users can **search by keywords**, and matching images appear instantly.
+- **No manual tagging required**—the system processes images in the background.
+
 ---
 
 ### 🔗 GitHub Repository Link & Commit
