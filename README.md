@@ -28,6 +28,13 @@ Moments is a Flask-based image-sharing platform that **leverages AI** to automat
 
 ---
 
+### 🔗 GitHub Repository Link & Commit
+
+📌 GitHub Repo: https://github.com/Srivatsa03/AI-moments
+📌 Latest Commit: https://github.com/Srivatsa03/AI-moments/commit/2006584f0c99229a1f8d55fda9ff2f253730823c
+
+---
+
 ## 🛠 Installation Guide
 
 Follow these steps to set up and run the project locally.
