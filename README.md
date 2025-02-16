@@ -13,6 +13,19 @@ Moments is a Flask-based image-sharing platform that **leverages AI** to automat
 ✅ **User Authentication** - Secure user login and profile management  
 ✅ **Image Uploading & Commenting** - Share and engage with photos  
 
+
+### 📝 Alternative Text Generation (AI-Powered)  
+- When a user uploads an image, **Azure Vision API** generates a description.
+- The generated **alt text** is stored in the `alt_text` column of the **Photo model** (`models.py`).
+- If a user provides their own description, it **overrides** the AI-generated text.
+- The **alt attribute** is automatically added to `<img>` elements for accessibility.
+
+### 🔍 AI-Powered Image Search  
+- Each uploaded image is **automatically tagged** using **Azure Vision API**.
+- The detected objects are stored as **tags** in the `tags` column of the **Photo model**.
+- Users can **search images** using **keywords that match tags**.
+- **Example:** Searching "cat" will retrieve all images that contain cats.
+
 ---
 
 ## 🛠 Installation Guide
@@ -118,6 +131,23 @@ You can use this test account to explore Moments:
 
 ---
 
+## ⚠️ Potential Harms & Mitigations
+
+### 1️⃣ 🔍 **Incorrect Image Descriptions**  
+- **Issue:** AI may **misidentify objects** and generate inaccurate alt text.
+- **Mitigation:** Allow users to **edit** AI-generated descriptions.
+
+### 2️⃣ 🎭 **Bias in AI Recognition**  
+- **Issue:** Some AI models may **favor certain demographics** due to biased training data.
+- **Mitigation:** Use a **diverse dataset** for AI model training and allow **manual tag corrections**.
+
+### 3️⃣ 📈 **Scalability Concerns**  
+- **Issue:** API requests may **slow down** with high traffic.
+- **Mitigation:** Implement **batch processing** and **caching**.
+
+---
+
+
 ### 🛡 Security & Best Practices
 
 ✅ No credentials are committed to GitHub.
@@ -136,6 +166,23 @@ You can use this test account to explore Moments:
 •	🏷 Better Tag Management - Improve AI tagging accuracy.
 
 ---
+
+## ⚙️ Production Challenges & Scalability  
+
+### 🖥️ **Scalability Issues**
+- **Problem:** If thousands of users upload images at once, **Azure API calls may slow down**.
+- **Solution:** Implement **caching** and **asynchronous processing** for API calls.
+
+### 💰 **Operating Costs**
+- **Problem:** Frequent API calls **increase costs** over time.
+- **Solution:** Reduce **unnecessary API requests** by storing **AI-generated tags in the database**.
+
+### 🏗 **Infrastructure Scaling**
+- **Problem:** Hosting a large number of images **increases storage requirements**.
+- **Solution:** Use **AWS S3** or **Azure Blob Storage** instead of local storage.
+
+---
+
 
 ## 📝 Contributors
 
