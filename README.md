@@ -90,7 +90,17 @@ flask run
 1.	Go to an image page
 2.	Click “Add Tags”
 3.	Enter a tag and save
+4.	
 ---
+🎭 Demo Test Account
+
+You can use this test account to explore Moments:
+
+📧 Email: admin@helloflask.com
+🔑 Password: moments
+
+---
+
 ## 🛠 Technology Stack
 
 🔹 Python & Flask - Backend framework
