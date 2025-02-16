@@ -16,7 +16,7 @@ Moments is a Flask-based image-sharing platform that **leverages AI** to automat
 
 ### 📝 Alternative Text Generation (AI-Powered)  
 - When a user uploads an image, **Azure Vision API** generates a description.
-- The generated **alt text** is stored in the `alt_text` column of the **Photo model** (`models.py`).
+- The generated alt text is stored in the alt_text column of the Photo model (models.py) using SQLAlchemy ORM, ensuring efficient database queries.
 - If a user provides their own description, it **overrides** the AI-generated text.
 - The **alt attribute** is automatically added to `<img>` elements for accessibility.
 
