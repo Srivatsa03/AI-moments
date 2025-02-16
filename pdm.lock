@@ -5,7 +5,7 @@
 groups = ["default", "dev"]
 strategy = ["inherit_metadata"]
 lock_version = "4.5.0"
-content_hash = "sha256:f6774d0bfae6b55b300259a6cf25418442611c48c328b30af0c1e6065f20a3f6"
+content_hash = "sha256:c9771588cc8a913446da8daff1570c05ad01cd38fc5c9351e0e140cb5b30543b"
 
 [[metadata.targets]]
 requires_python = ">=3.9"
@@ -189,6 +189,17 @@ files = [
 ]
 
 [[package]]
+name = "dominate"
+version = "2.9.1"
+requires_python = ">=3.4"
+summary = "Dominate is a Python library for creating and manipulating HTML documents using an elegant DOM API."
+groups = ["default"]
+files = [
+    {file = "dominate-2.9.1-py2.py3-none-any.whl", hash = "sha256:cb7b6b79d33b15ae0a6e87856b984879927c7c2ebb29522df4c75b28ffd9b989"},
+    {file = "dominate-2.9.1.tar.gz", hash = "sha256:558284687d9b8aae1904e3d6051ad132dd4a8c0cf551b37ea4e7e42a31d19dc4"},
+]
+
+[[package]]
 name = "email-validator"
 version = "2.2.0"
 requires_python = ">=3.8"
@@ -272,6 +283,20 @@ dependencies = [
 files = [
     {file = "Flask-Avatars-0.2.3.tar.gz", hash = "sha256:6e85c8e1009e77cf0a6d06ae7eb1a86bf139db995f1a08df210018b2f1ac4300"},
     {file = "Flask_Avatars-0.2.3-py2.py3-none-any.whl", hash = "sha256:07c2983277b886252a0de3b3f754bd579032ae3fa4a9cd93a8da3999f6f6b8c3"},
+]
+
+[[package]]
+name = "flask-bootstrap"
+version = "3.3.7.1"
+summary = "An extension that includes Bootstrap in your project, without any boilerplate code."
+groups = ["default"]
+dependencies = [
+    "Flask>=0.8",
+    "dominate",
+    "visitor",
+]
+files = [
+    {file = "Flask-Bootstrap-3.3.7.1.tar.gz", hash = "sha256:cb08ed940183f6343a64e465e83b3a3f13c53e1baabb8d72b5da4545ef123ac8"},
 ]
 
 [[package]]
@@ -1138,6 +1163,15 @@ dependencies = [
 files = [
     {file = "virtualenv-20.29.1-py3-none-any.whl", hash = "sha256:4e4cb403c0b0da39e13b46b1b2476e505cb0046b25f242bee80f62bf990b2779"},
     {file = "virtualenv-20.29.1.tar.gz", hash = "sha256:b8b8970138d32fb606192cb97f6cd4bb644fa486be9308fb9b63f81091b5dc35"},
+]
+
+[[package]]
+name = "visitor"
+version = "0.1.3"
+summary = "A tiny pythonic visitor implementation."
+groups = ["default"]
+files = [
+    {file = "visitor-0.1.3.tar.gz", hash = "sha256:2c737903b2b6864ebc6167eef7cf3b997126f1aa94bdf590f90f1436d23e480a"},
 ]
 
 [[package]]

@@ -12,7 +12,16 @@ from moments.core.logging import register_logging
 from moments.core.request import register_request_handlers
 from moments.core.templating import register_template_handlers
 from moments.settings import config
+from flask_migrate import Migrate
+from flask_sqlalchemy import SQLAlchemy
 
+from dotenv import load_dotenv
+import os
+
+# Load .env variables
+load_dotenv()
+
+migrate = Migrate() 
 
 def create_app(config_name):
     app = Flask('moments')
@@ -27,6 +36,8 @@ def create_app(config_name):
     whooshee.init_app(app)
     avatars.init_app(app)
     csrf.init_app(app)
+    migrate.init_app(app, db)
+    
 
     app.register_blueprint(main_bp)
     app.register_blueprint(user_bp, url_prefix='/user')
