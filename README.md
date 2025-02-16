@@ -92,11 +92,12 @@ flask run
 3.	Enter a tag and save
 4.	
 ---
-🎭 Demo Test Account
+### 🎭 Demo Test Account
 
 You can use this test account to explore Moments:
 
 📧 Email: admin@helloflask.com
+
 🔑 Password: moments
 
 ---
